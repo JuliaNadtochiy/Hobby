@@ -19,7 +19,8 @@ public class Football extends Hobby{
     }
 
     @Override
-    public void tellAboutHobby() {
+    public void tellAboutHobby() throws HobbyException{
+        if(numberOfWins < 0  || numberOfMatches < 0 || getAmountOfYears() < 0 || getNumberOfOccupationPerWeek() < 0 || getCostForOneOccupation() < 0) throw new HobbyException();
         System.out.println(toString());
     }
 }

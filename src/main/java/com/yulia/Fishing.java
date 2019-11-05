@@ -16,7 +16,8 @@ public class Fishing extends Hobby {
     }
 
     @Override
-    public void tellAboutHobby() {
+    public void tellAboutHobby() throws HobbyException {
+        if( maxCatch <= 0 || getAmountOfYears() < 0 || getNumberOfOccupationPerWeek() < 0 || getCostForOneOccupation() < 0) throw new HobbyException();
         System.out.println(toString());
     }
 }

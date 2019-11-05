@@ -13,6 +13,38 @@ public abstract class Hobby {
         this.costForOneOccupation = costForOneOccupation;
     }
 
+    public void setNameOfHobby(String nameOfHobby) {
+        this.nameOfHobby = nameOfHobby;
+    }
+
+    public byte getAmountOfYears() {
+        return amountOfYears;
+    }
+
+    public void setAmountOfYears(byte amountOfYears) {
+        this.amountOfYears = amountOfYears;
+    }
+
+    public short getNumberOfOccupationPerWeek() {
+        return numberOfOccupationPerWeek;
+    }
+
+    public void setNumberOfOccupationPerWeek(short numberOfOccupationPerWeek) {
+        this.numberOfOccupationPerWeek = numberOfOccupationPerWeek;
+    }
+
+    public float getCostForOneOccupation() {
+        return costForOneOccupation;
+    }
+
+    public void setCostForOneOccupation(float costForOneOccupation) {
+        this.costForOneOccupation = costForOneOccupation;
+    }
+
+    public String getNameOfHobby() {
+        return nameOfHobby;
+    }
+
     @Override
     public String toString() {
         return "Hobby{" +
@@ -23,6 +55,6 @@ public abstract class Hobby {
                 '}';
     }
 
-    public abstract void tellAboutHobby();
+    public abstract void tellAboutHobby () throws HobbyException;
 
 }
