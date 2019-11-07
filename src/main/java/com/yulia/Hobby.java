@@ -6,55 +6,59 @@ public abstract class Hobby {
     private short numberOfOccupationPerWeek;
     private float costForOneOccupation;
 
-    public Hobby(String nameOfHobby, byte amountOfYears, short numberOfOccupationPerWeek, float costForOneOccupation) {
+    public Hobby(final String nameOfHobby, final byte amountOfYears,
+                 final short numberOfOccupationPerWeek,
+                 final float costForOneOccupation) {
         this.nameOfHobby = nameOfHobby;
         this.amountOfYears = amountOfYears;
         this.numberOfOccupationPerWeek = numberOfOccupationPerWeek;
         this.costForOneOccupation = costForOneOccupation;
     }
 
-    public void setNameOfHobby(String nameOfHobby) {
+    public final void setNameOfHobby(final String nameOfHobby) {
         this.nameOfHobby = nameOfHobby;
     }
 
-    public byte getAmountOfYears() {
+    public final byte getAmountOfYears() {
         return amountOfYears;
     }
 
-    public void setAmountOfYears(byte amountOfYears) {
+    public final void setAmountOfYears(final byte amountOfYears) {
         this.amountOfYears = amountOfYears;
     }
 
-    public short getNumberOfOccupationPerWeek() {
+    public final short getNumberOfOccupationPerWeek() {
         return numberOfOccupationPerWeek;
     }
 
-    public void setNumberOfOccupationPerWeek(short numberOfOccupationPerWeek) {
+    public final void setNumberOfOccupationPerWeek(
+            final short numberOfOccupationPerWeek) {
         this.numberOfOccupationPerWeek = numberOfOccupationPerWeek;
     }
 
-    public float getCostForOneOccupation() {
+    public final float getCostForOneOccupation() {
         return costForOneOccupation;
     }
 
-    public void setCostForOneOccupation(float costForOneOccupation) {
+    public final void setCostForOneOccupation(
+            final float costForOneOccupation) {
         this.costForOneOccupation = costForOneOccupation;
     }
 
-    public String getNameOfHobby() {
+    public final String getNameOfHobby() {
         return nameOfHobby;
     }
 
     @Override
     public String toString() {
-        return "Hobby{" +
-                "nameOfHobby='" + nameOfHobby + '\'' +
-                ", amountOfYears=" + amountOfYears +
-                ", numberOfOccupationPerWeek=" + numberOfOccupationPerWeek +
-                ", costForOneOccupation=" + costForOneOccupation +
-                '}';
+        return "Hobby{"
+                + "nameOfHobby='" + nameOfHobby + '\''
+                + ", amountOfYears=" + amountOfYears
+                + ", numberOfOccupationPerWeek=" + numberOfOccupationPerWeek
+                + ", costForOneOccupation=" + costForOneOccupation
+                + '}';
     }
 
-    public abstract void tellAboutHobby () throws HobbyException;
+    public abstract void tellAboutHobby() throws HobbyException;
 
 }
